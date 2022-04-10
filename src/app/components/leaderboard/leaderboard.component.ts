@@ -9,12 +9,25 @@ import { Player } from 'src/app/Player';
 })
 export class LeaderboardComponent implements OnInit {
   players: Player[] = PLAYERS;
+  
   constructor() {
-    this.players[0].TotalScore = 300
-    console.log(this.players[0].TotalScore)
+
+    function mergeById(arrayPlayers:any, arrayResults:any){
+      // array1.map((player:any) => console.log(player))
+      // console.log(array2)
+      let results = arrayPlayers.map((player:any) => ({
+        ...arrayResults.find((result:any) => (result.PlayerId === player.PlayerId) && result),
+        ...player
+      }));
+      return results
+    }
+
     fetch("https://mocki.io/v1/57c703ab-c5af-4530-b126-d1b784353bea")
       .then(data => data.json())
-      .then(data => console.log(data))
+      .then(data => {
+        this.players = mergeById(this.players, data.Results);
+        
+      })
   }
 
   displayedColumns = ['PlayerId', "Name"]
