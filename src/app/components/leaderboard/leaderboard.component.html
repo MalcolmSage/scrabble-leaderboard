@@ -2,12 +2,20 @@
 
 <table mat-table [dataSource]="players">
     <ng-container matColumnDef="PlayerId">
-        <th mat-header-cell *matHeaderCellDef>#</th>
-        <td mat-cell *matCellDef="let player">{{player.PlayerId}}</td>
+        <th mat-header-cell *matHeaderCellDef>Position</th>
+        <td mat-cell *matCellDef="let player">{{player.Position}}</td>
     </ng-container>
     <ng-container matColumnDef="Name">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <th mat-header-cell *matHeaderCellDef>Player Name</th>
         <td mat-cell *matCellDef="let player">{{player.Name}}</td>
+    </ng-container>
+    <ng-container matColumnDef="GamesPlayed">
+        <th mat-header-cell *matHeaderCellDef>Games Played</th>
+        <td mat-cell *matCellDef="let player">{{player.GamesPlayed}}</td>
+    </ng-container>
+    <ng-container matColumnDef="TotalScore">
+        <th mat-header-cell *matHeaderCellDef>Total Score</th>
+        <td mat-cell *matCellDef="let player">{{player.TotalScore}}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -3,4 +3,5 @@ export interface Player {
     Name: string;
     TotalScore?: number;
     GamesPlayed?: number;
+    Position?: number;
 }
