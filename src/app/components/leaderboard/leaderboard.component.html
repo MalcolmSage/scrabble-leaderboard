@@ -1,0 +1,16 @@
+<!-- <app-leaderboard-player *ngFor="let player of players" [player]="player"></app-leaderboard-player> -->
+
+<table mat-table [dataSource]="players">
+    <ng-container matColumnDef="PlayerId">
+        <th mat-header-cell *matHeaderCellDef>#</th>
+        <td mat-cell *matCellDef="let player">{{player.PlayerId}}</td>
+    </ng-container>
+    <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let player">{{player.Name}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+    <tr mat-row *matRowDef="let players;columns:displayedColumns"></tr>
+</table>
