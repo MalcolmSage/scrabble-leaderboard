@@ -9,7 +9,13 @@ import { Player } from 'src/app/Player';
 })
 export class LeaderboardComponent implements OnInit {
   players: Player[] = PLAYERS;
-  constructor() { }
+  constructor() {
+    this.players[0].TotalScore = 300
+    console.log(this.players[0].TotalScore)
+    fetch("https://mocki.io/v1/57c703ab-c5af-4530-b126-d1b784353bea")
+      .then(data => data.json())
+      .then(data => console.log(data))
+  }
 
   displayedColumns = ['PlayerId', "Name"]
 
