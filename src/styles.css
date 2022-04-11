@@ -8,6 +8,8 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .section {
@@ -19,11 +21,10 @@ body {
 }
 
 .container {
-    flex: 1;
-    /* max-width: 400px; */
+    flex: 3;
     margin: 10px;
     min-height: 200px;
-    border: 1px solid steelblue;
+    border: 2px solid #E1E1E1;
     padding: 30px;
     border-radius: 5px;
 }
@@ -94,6 +95,10 @@ body {
 @media (max-width: 900px) {
     .section {
         flex-direction: column;
+    }
+    .container {
+        width: 100%;
+
     }
 }
 html, body { height: 100%; }
