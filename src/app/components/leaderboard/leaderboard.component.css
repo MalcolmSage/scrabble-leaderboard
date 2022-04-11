@@ -2,6 +2,13 @@
     width: 100%;
 }
 
+.mat-sort {
+    background-color: #E1E1E1;
+}
+
+.mat-row .mat-cell {
+    background-color: white;
+}
 
 
 .mat-column-Position {
