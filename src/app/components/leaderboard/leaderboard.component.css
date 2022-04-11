@@ -1,0 +1,32 @@
+.table {
+    width: 100%;
+}
+
+
+
+.mat-column-Position {
+    font-style: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.mat-column-Name {
+    color: black;
+
+}
+
+.mat-column-GamesPlayed {
+    color: black;
+
+}
+
+.mat-column-TotalScore {
+    color: black;
+
+}
+
+@media (max-width: 900px) {
+    .mat-column-Name, .mat-column-GamesPlayed, .mat-column-TotalScore {
+        text-align: center;
+    }
+}
