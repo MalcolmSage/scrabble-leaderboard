@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PLAYERS } from 'src/app/players';
 import { Player } from 'src/app/Player';
+import { faTrophy } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-leaderboard',
@@ -9,9 +11,8 @@ import { Player } from 'src/app/Player';
 })
 export class LeaderboardComponent implements OnInit {
   players: Player[] = PLAYERS;
-
+  faTrophy = faTrophy;
   constructor() {
-
     function mergeById(arrayPlayers: any, arrayResults: any) {
       // array1.map((player:any) => console.log(player))
       // console.log(array2)
@@ -31,6 +32,8 @@ export class LeaderboardComponent implements OnInit {
       })
       return array
     }
+
+
 
     fetch("https://mocki.io/v1/57c703ab-c5af-4530-b126-d1b784353bea")
       .then(data => data.json())
