@@ -12,6 +12,8 @@ import { faTrophy } from '@fortawesome/free-solid-svg-icons';
 export class LeaderboardComponent implements OnInit {
   players: Player[] = PLAYERS;
   faTrophy = faTrophy;
+  trophy = ['#FFD700', '#c0c0c0', '#cd7f32']
+
   constructor() {
     function mergeById(arrayPlayers: any, arrayResults: any) {
       // array1.map((player:any) => console.log(player))

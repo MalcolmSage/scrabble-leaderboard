@@ -4,9 +4,7 @@
     <ng-container matColumnDef="PlayerId">
         <th mat-header-cell *matHeaderCellDef>Position</th>
         <td mat-cell *matCellDef="let player">{{player.Position}} 
-            <span *ngIf="player.Position === 1"><fa-icon [ngStyle]="{'color': '#FFD700'}" [icon]="faTrophy"></fa-icon></span>
-            <span *ngIf="player.Position === 2"><fa-icon [ngStyle]="{'color': '#c0c0c0'}" [icon]="faTrophy"></fa-icon></span>
-            <span *ngIf="player.Position === 3"><fa-icon [ngStyle]="{'color': '#cd7f32'}" [icon]="faTrophy"></fa-icon></span>
+            <span *ngIf="player.Position <= 3"><fa-icon [ngStyle]="{'color': trophy[player.Position-1]}" [icon]="faTrophy"></fa-icon></span>
         </td>
     </ng-container>
     <ng-container matColumnDef="Name">
