@@ -9,7 +9,9 @@ import { LeaderboardComponent } from './components/leaderboard/leaderboard.compo
 import { LeaderboardPlayerComponent } from './components/leaderboard-player/leaderboard-player.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     BrowserAnimationsModule,
     MatTableModule,
+    MatSortModule,
+    HttpClientModule,
     FontAwesomeModule
   ],
   providers: [],
